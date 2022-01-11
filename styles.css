@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* 
+1. Reset
+
+2. Universal
+
+3. Styles 
+*/
+
+
+/* * { border: 1px solid red; } */
+
+/* 1. Reset */
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Monteserrat, sans-serif;
+}
+
+/* 2. Universal */
+main {
+    margin-top: 130px;
+}
+
+h2 {
+    font-weight: 400;
+    margin-top: 50px;
+    font-family: 'PT Serif', serif;
+    font-style: italic;
+}
+
+h2.icon {
+    margin-top: 0;
+}
+
+section {
+    margin: auto 10%;
+}
+
+button {
+    background-color: #F26457;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #F2F0EB;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFFFFF;
+    color:#F26457;
+    box-shadow: inset 0px 0px 0px 3px #F26457;
+}
+
+/* 3. Styles */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F26457;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+header h1 {
+    font-weight: 400;
+}
+
+header h1 span {
+    font-weight: 600;
+}
+
+nav {
+    width: 100%;
+    text-align: center;
+    background-color: #F2B05E;
+}
+
+nav ul {
+    padding-left: 0;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 400;
+    color: #222222;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    font-weight: 600;
+    border-bottom: 3px solid honeydew;
+}
+
+#book-month {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    align-items: center;
+}
+
+#book-month .info {
+    justify-self: end;
+    text-align: right;
+}
+
+#book-month .img {
+    justify-self: center;
+    grid-column: 2 / 4;
+}
+
+#book-month img {
+    min-width: 200px;
+    width: 100%;
+}
+
+#how-it-works {
+    text-align: center;
+}
+
+#steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width:770px) {
+    #steps {
+        flex-direction: column;
+    }
+}
+
+.icon i {
+    color: #F2B05E;
+}
+
+#steps h3 {
+    color: gray;
+}
+
+#steps p {
+    margin-bottom: 0;
+    font-family: 'PT Serif', serif;
+    font-style: italic;
+}
+
+.step {
+    background-color: rgb(237, 237, 237);
+    padding: 40px;
+    flex: 1;
+}
+
+#how-it-works button {
+    margin-top: 50px;
+}
+
+#favorites {
+    display: grid;
+    grid-template: 150px 1fr / 1fr 1fr;
+}
+
+#favorites .section-title {
+    grid-area: 1 / 1 / span 1 / span 2;
+    text-align: center;
+}
+
+#favorites .books {
+    grid-area: 2 / 1 / span 1 / span 2;
+}
+
+#favorites img {
+    width: 100%;
+}
+
+.books {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+}
+
+
+@media only screen and (max-width: 720px) {
+    .books {
+        display: grid;
+        grid-template: 1fr / 1fr;
+    }
+}
+
+.book1,
+.book2 {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(5, 1fr);
+    align-items: center;
+}
+
+.book1 .img {
+    grid-area: 1 / 2 / span 3 / span 4;
+    justify-self: end;
+}
+
+.book1 .info {
+    grid-area: 2 / 1 / span 1 / span 2;
+    z-index: 1;
+    text-align: right;
+}
+
+.book2 .img {
+    grid-area: 1 / 1 / span 3 / span 4;
+    justify-self: start;
+}
+
+.book2 .info {
+    grid-area: 2 / 4 / span 1 / span 2;
+    z-index: 1;
+    text-align: left;
+}
+
+.books .info h3,
+.books .info p {
+    background-color: #F26457;
+    padding: 10px 20px;
+}
+
+#testimonials {
+    margin: 50px 0;
+    padding: 50px 0;
+    display: flex;
+    min-height: 30vh;
+    align-items: center;
+    text-align: center;
+    background-color: #F26457;
+    color: honeydew;
+}
+
+#testimonials figure {
+    width: 50%;
+    margin: auto;
+}
+
+#testimonials figcaption {
+    font-family: 'PT Serif', serif;
+}
+
+footer {
+    text-align: center;
+    background-color: #F2B05E;
+    display: grid;
+    grid-template: 2fr 1fr / 1fr 1fr;
+    justify-content: space-between;
+    padding: 50px 10% 10px 10%;
+}
+
+footer nav {
+    text-align: left;
+}
+
+@media only screen and (max-width: 986px) {
+    footer nav ul li {
+        display: block;
+    }
+}
+
+footer .social-media {
+    text-align: right
+}
+
+footer .social-media ul li a:hover {
+    border-bottom: none;
+    color: honeydew;
+}
+
+footer nav ul li a {
+    font-size: 12px;
+}
+
+.copyright {
+    grid-column: span 2;
+    font-size: 10px;
+}
